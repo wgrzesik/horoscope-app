@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { OpenHoroscopeService } from '../open-horoscope.service';
 import { HoroscopeData } from '../models/horoscope.model';
 import { faEarth, faFire, faCalendar} from '@fortawesome/free-solid-svg-icons';
@@ -15,29 +15,21 @@ export class HoroscopeComponent implements OnInit {
   faFire = faFire;
   faCalendar = faCalendar;
 
-  constructor (private openHoroscopeService: OpenHoroscopeService) {
+  @Input()
 
-  }
-  sunSign: string = 'Libra'
-  horoscopeData?: HoroscopeData;
+  public horoscopeData?: HoroscopeData;
 
-  ngOnInit(): void {
-    this.getHoroscope(this.sunSign);
-    this.sunSign = '';
-  }
+  @Output()
+  public sunSign: string = 'Libra'
 
-  onSubmit() {
-    this.getHoroscope(this.sunSign);
-    this.sunSign = '';
-  }
 
-  private getHoroscope(sunSign: string) {
-    this.openHoroscopeService.getHoroscopeData(sunSign)
-    .subscribe({
-      next: (response) => {
-        this.horoscopeData = response;
-        console.log(response);
-      }
-    });
-  }
+  constructor(
+    ) { }
+
+    onSubmit() {
+
+    }
+    ngOnInit(): void {
+    }
+
 }

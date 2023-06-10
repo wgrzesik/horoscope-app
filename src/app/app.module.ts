@@ -8,11 +8,13 @@ import { HoroscopeComponent } from './horoscope/horoscope.component';
 import { FormsModule } from '@angular/forms';
 import { OpenHoroscopeService } from './open-horoscope.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HoroscopeDataContainerComponent } from './horoscope-data-container/horoscope-data-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HoroscopeComponent
+    HoroscopeComponent,
+    HoroscopeDataContainerComponent
   ],
   imports: [
     BrowserModule,
