@@ -1,0 +1,79 @@
+  <div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" placeholder="search sunsign" name="sunsign" [(ngModel)]="sunSign">
+    </form>
+  </div>
+  <div class="container" *ngIf="horoscopeData">
+    <div class="first-column">
+      <div class="upper-data">
+        <img src="../assets/aquarius.jpg" *ngIf="horoscopeData.name === 'Aquarius'">
+        <img src="../assets/aries.jpg" *ngIf="horoscopeData.name === 'Aries'">
+        <img src="../assets/cancer.jpg" *ngIf="horoscopeData.name === 'Cancer'">
+        <img src="../assets/capricorn.jpg" *ngIf="horoscopeData.name === 'Capricorn'">
+        <img src="../assets/gemini.jpg" *ngIf="horoscopeData.name === 'Gemini'">
+        <img src="../assets/leo.jpg" *ngIf="horoscopeData.name === 'Leo'">
+        <img src="../assets/libra.jpg" *ngIf="horoscopeData.name === 'Libra'">
+        <img src="../assets/pices.jpg" *ngIf="horoscopeData.name === 'Pices'">
+        <img src="../assets/sagittarius.jpg" *ngIf="horoscopeData.name === 'Saqittarius'">
+        <img src="../assets/scorpio.jpg" *ngIf="horoscopeData.name === 'Scorpio'">
+        <img src="../assets/taurus.jpg" *ngIf="horoscopeData.name === 'Tautus'">
+        <img src="../assets/virgo.jpg" *ngIf="horoscopeData.name === 'Virgo'">
+    
+        <div class="horoscope-data">
+          <div class="sign">{{ horoscopeData.name }}</div>
+        </div>
+      </div>
+  
+      <div class="lower-data">
+        <div class="more-info-label">
+          Information
+        </div>
+        <div class="more-info-container">
+          <div class="info-block">
+            <div class="info-block-label">
+              <fa-icon style="color: white" [icon]="faGlobe"></fa-icon>
+              <span>ruling<br>planet</span>
+            </div>
+            <div class="info-block-value">
+              {{ horoscopeData.ruling_planet }}
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-block-label">
+              <fa-icon style="color: white" [icon]="faFire"></fa-icon>
+              <span>element</span>
+            </div>
+            <div class="info-block-value">
+              {{ horoscopeData.element }}
+            </div>
+          </div>
+          <div class="info-block-date">
+            <div class="info-block-label-date">
+              <fa-icon style="color: white" [icon]="faCalendar"></fa-icon>
+              <span>date range</span>
+            </div>
+            <div class="info-block-value-date">
+              {{ horoscopeData.date_range }}
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+
+
+    <div class="second-column">
+      <div class="details-block">
+        <p class="text-center">
+          {{ horoscopeData.about }}
+        </p>
+      </div>
+      <div class="details-label">
+        Compatibility
+      </div>
+      <div class="details-block">
+        {{ horoscopeData.compatibility }}
+      </div>
+    </div>
+
+  </div>
