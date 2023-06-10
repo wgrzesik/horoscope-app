@@ -4,5 +4,6 @@
     </form>
   </div>
 
-    <app-horoscope [horoscopeData]="horoscopeData1" >
+    <app-horoscope [horoscopeData]="horoscopeData1" (newSignEvent) = "changeGender"
+    >
     </app-horoscope>

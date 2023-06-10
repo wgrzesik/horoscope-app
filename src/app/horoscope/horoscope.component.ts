@@ -15,21 +15,28 @@ export class HoroscopeComponent implements OnInit {
   faFire = faFire;
   faCalendar = faCalendar;
 
-  @Input()
+  public gender: string = 'woman'
 
+  @Input()
   public horoscopeData?: HoroscopeData;
+
 
   @Output()
   public sunSign: string = 'Libra'
-
+  newSignEvent = new EventEmitter<string>();
 
   constructor(
     ) { }
 
-    onSubmit() {
+  onSubmit() {
+    }
 
+  ngOnInit(): void {
     }
-    ngOnInit(): void {
-    }
+  
+  changeGender(value: string) {
+    this.gender = value;
+    this.newSignEvent.emit(this.gender)
+  }
 
 }

@@ -58,17 +58,20 @@
 
 
     <div class="second-column">
-      <div class="details-block">
-        <p class="text-center">
-          {{ horoscopeData.about }}
-        </p>
+      <div class="button-row">
+        <button class="button" (click)="changeGender('woman')" [style.background-color]=" gender == 'woman'? '#9c6464 ': '#728c5d' ">Woman</button>
+        <button class="button" (click)="changeGender('man')" [style.background-color]=" gender == 'man'? '#D3774b': '#728c5d' ">Man</button>
       </div>
       <div class="details-label">
-        Compatibility
+        <p>
+          Get to know yourself {{ gender }}
+        </p>
       </div>
-      <div class="details-block">
-        {{ horoscopeData.compatibility }}
-      </div>
+      <div class="details-block" *ngIf="gender === 'woman'">
+        {{ horoscopeData.woman }}
+      </div> 
+      <div class="details-block" *ngIf="gender === 'man'">
+        {{ horoscopeData.man }}
+      </div> 
     </div>
-
   </div>

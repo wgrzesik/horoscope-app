@@ -175,3 +175,26 @@ body {
     margin-top: 1em;
     color: var(--white)
 }
+.details-label p {
+    text-align: center;
+}
+.button-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    border-radius:  20px;
+    padding: 0.8em;
+    background-color: var(--green-1);
+    color: black;
+    border: none;
+    color: white;
+    margin-right: 10%;
+}
+
+.button #woman{
+    background-color: pink;
+}
