@@ -11,6 +11,7 @@ import { HoroscopeDataContainerComponent } from './horoscope-data-container/horo
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NumerologyComponent } from './numerology/numerology.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

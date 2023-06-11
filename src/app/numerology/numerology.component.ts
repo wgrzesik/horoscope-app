@@ -12,6 +12,7 @@ export class NumerologyComponent implements OnInit{
 
   public number: string = '7'
   public numerologyData?: NumerologyData
+  errormessage: any
 
   constructor (private openNumerologyService: OpenNumerologyService) {}
 
@@ -31,6 +32,9 @@ export class NumerologyComponent implements OnInit{
       next: (response) => {
         this.numerologyData = response;
         console.log(response);
+      },
+      error: (error) => {
+        this.errormessage = error;
       }
     });
   }

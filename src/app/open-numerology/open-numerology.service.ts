@@ -1,7 +1,9 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpInterceptor, HttpRequest, HttpHandler, HttpEvent } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NumerologyData } from '../models/numerology.model';
 import { Observable } from 'rxjs/internal/Observable';
+import { catchError, throwError } from 'rxjs';
+import * as alertifyjs from 'alertifyjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +22,22 @@ export class OpenNumerologyService {
     const params = new HttpParams()
       .set('n', number.toLowerCase());
 
-    return this.http.get<NumerologyData>(url, {headers, params});
+    return this.http.get<NumerologyData>(url, {headers, params})
+      .pipe(catchError(this.handleError));
+    
   }
   
+  private handleError(error: HttpErrorResponse) {
+    let errormessage = '';
+    if (error.status === 0) {
+      console.error('An error occurred:', error.error);
+    } else {
+      console.error(
+        `Backend returned code ${error.status}, body was: `, error.error);
+        errormessage = `Backend returned code ${error.status},\n`, error.error;
+    }
+    errormessage += 'Something bad happened; please try again later.';
+    alertifyjs.error(errormessage);
+    return throwError(() => new Error(errormessage));
+  }
 }

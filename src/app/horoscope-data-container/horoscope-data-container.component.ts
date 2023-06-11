@@ -17,6 +17,7 @@ export class HoroscopeDataContainerComponent implements OnInit {
   public sunSign: string = 'Libra'
   public horoscopeData1?: HoroscopeData;
   public gender: string = 'woman';
+  errormessage: any
 
   constructor (private openHoroscopeService: OpenHoroscopeService) {
 
@@ -40,7 +41,7 @@ export class HoroscopeDataContainerComponent implements OnInit {
         console.log(response);
       },
       error: (error) => {
-        console.log(error);
+        this.errormessage = error;
       }
 
     });
