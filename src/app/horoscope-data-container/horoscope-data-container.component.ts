@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HoroscopeData } from '../models/horoscope.model';
-import { OpenHoroscopeService } from '../open-horoscope.service';
+import { OpenHoroscopeService } from '../open-horoscope/open-horoscope.service';
 import { faEarth, faFire, faCalendar} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -38,7 +38,11 @@ export class HoroscopeDataContainerComponent implements OnInit {
       next: (response) => {
         this.horoscopeData1 = response;
         console.log(response);
+      },
+      error: (error) => {
+        console.log(error);
       }
+
     });
   }
 

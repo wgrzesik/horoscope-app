@@ -18,4 +18,11 @@ describe('HoroscopeDataContainerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
+
+// describe('changeGender', () => {
+//   it('should asign to parameter gender woman if the input is woman', () => {
+//     const result = changeGender()
+//   })
+// });

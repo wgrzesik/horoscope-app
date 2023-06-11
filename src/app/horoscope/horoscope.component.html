@@ -1,4 +1,5 @@
   <div class="container" *ngIf="horoscopeData">
+    <div class="if-no-error" *ngIf="!horoscopeData.error; else ifError"> 
     <div class="first-column">
       <div class="upper-data">
         <img src="../assets/aquarius.jpg" *ngIf="horoscopeData.name === 'Aquarius'">
@@ -13,21 +14,18 @@
         <img src="../assets/scorpio.jpg" *ngIf="horoscopeData.name === 'Scorpio'">
         <img src="../assets/taurus.jpg" *ngIf="horoscopeData.name === 'Tautus'">
         <img src="../assets/virgo.jpg" *ngIf="horoscopeData.name === 'Virgo'">
-    
-        <div class="horoscope-data">
-          <div class="sign">{{ horoscopeData.name }}</div>
-        </div>
       </div>
   
       <div class="lower-data">
         <div class="more-info-label">
-          Information
+          {{ horoscopeData.name }}
         </div>
         <div class="more-info-container">
           <div class="info-block">
             <div class="info-block-label">
               <fa-icon style="color: white" [icon]="faGlobe"></fa-icon>
-              <span>ruling<br>planet</span>
+              <span>ruling</span>
+              <span>planet</span>
             </div>
             <div class="info-block-value">
               {{ horoscopeData.ruling_planet }}
@@ -37,6 +35,7 @@
             <div class="info-block-label">
               <fa-icon style="color: white" [icon]="faFire"></fa-icon>
               <span>element</span>
+              <span></span>
             </div>
             <div class="info-block-value">
               {{ horoscopeData.element }}
@@ -45,7 +44,8 @@
           <div class="info-block-date">
             <div class="info-block-label-date">
               <fa-icon style="color: white" [icon]="faCalendar"></fa-icon>
-              <span>date range</span>
+              <span>date</span>
+              <span>range</span>
             </div>
             <div class="info-block-value-date">
               {{ horoscopeData.date_range }}
@@ -64,7 +64,7 @@
       </div>
       <div class="details-label">
         <p>
-          Get to know yourself {{ gender }}
+          Get to know yourselfs
         </p>
       </div>
       <div class="details-block" *ngIf="gender === 'woman'">
@@ -75,3 +75,11 @@
       </div> 
     </div>
   </div>
+    <ng-template #ifError>
+    <div class="error-container">
+      <p>
+        {{ horoscopeData.error }}
+      </p>
+    </div>
+  </ng-template>
+</div>

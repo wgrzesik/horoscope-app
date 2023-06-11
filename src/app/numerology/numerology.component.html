@@ -1,0 +1,26 @@
+<body>
+    <div class="search">
+        <form #form="ngForm" (submit)="onSubmitNumber()">
+          <input type="text" placeholder="number" name="number" [(ngModel)]="number">
+        </form>
+    </div>
+    <div class="container-numerology" *ngIf="numerologyData">
+        <div class="upper-num">
+           
+            <div class="num-disp">
+                {{ numerologyData.number }}
+            </div>
+        </div>
+        <div class="lower-num" >
+            <div class="lower-container" >
+                <p *ngIf="numerologyData.desc != ''">
+                    {{ numerologyData.desc }}
+                </p>
+                <p id="noNumber" *ngIf="numerologyData.desc == ''">
+                    There is no numerology for this number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>

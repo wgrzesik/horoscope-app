@@ -15,5 +15,6 @@ export interface HoroscopeData {
     symbol: string
     weaknesses: string
     woman: string
+    error: string
   }
   

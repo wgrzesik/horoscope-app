@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { OpenHoroscopeService } from '../open-horoscope.service';
+import { OpenHoroscopeService } from '../open-horoscope/open-horoscope.service';
 import { HoroscopeData } from '../models/horoscope.model';
 import { faEarth, faFire, faCalendar} from '@fortawesome/free-solid-svg-icons';
 
