@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HoroscopeDataContainerComponent } from './horoscope-data-container/horoscope-data-container.component';
 import { NumerologyComponent } from './numerology/numerology.component';
 
-
 const routes: Routes = [
   {
   path: 'horoscope',
