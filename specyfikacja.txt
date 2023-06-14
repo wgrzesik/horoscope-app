@@ -1,6 +1,8 @@
 1. Wymagania funkcjonalne 
--	Aplikacja umożliwia wpisanie znaku zodiaku przez użytkownika i wyświetla informacje dotyczące tego znaku, takie jak: planeta wodząca (ruling planet), żywioł (element), zakres dat (date range).
--	Aplikacja umożliwia wyświetlanie spersonalizowanych wyników dla kobiet i mężczyzn. Dzięki dwóm zakładką dla kobiet i mężczyzn (woman/man), które wyświetlają informację o kobietach/mężczyznach spod wybranego znaku.
+-	Aplikacja umożliwia wpisanie znaku zodiaku przez użytkownika i wyświetla informacje dotyczące tego znaku, takie jak: planeta wodząca (ruling planet),
+    żywioł (element), zakres dat (date range).
+-	Aplikacja umożliwia wyświetlanie spersonalizowanych wyników dla kobiet i mężczyzn. Dzięki dwóm zakładką dla kobiet i mężczyzn (woman/man),
+    które wyświetlają informację o kobietach/mężczyznach spod wybranego znaku.
 -	Łatwość przełączania się między zakładkami: Zodiac i Numerology. 
 -	Aplikacja umożliwia wpisanie liczby przez użytkownika i wyświetla informacje dotyczące tego numeru na podstawie numerologii.  
 	
@@ -13,7 +15,10 @@
     	Dla wszystkich error-ów związanych z http, wyświetlana jest informacja o kodzie błędu i treści błędu w postaci wyskakującego powiadomienia. 
 
 3.  Opis projektu
-Aplikacja umożliwia użytkownikowi uzyskanie informacji na temat znaku zodiaku i numerologii w łatwy i intuicyjny sposób. Aplikacja oferuje dwie zakładki - pierwsza umożliwia wprowadzenie znaku zodiaku, aby otrzymać szczegółowe informacje na jego temat, takie jak planeta wodząca, żywioł, daty trwania i krótki opis zarówno dla kobiet jak i mężczyzn. Druga zakładka pozwala użytkownikom na wprowadzenie cyfry, a następnie wyświetla związane z nią informacje numerologiczne.
+Aplikacja umożliwia użytkownikowi uzyskanie informacji na temat znaku zodiaku i numerologii w łatwy i intuicyjny sposób. Aplikacja oferuje dwie zakładki.
+Pierwsza umożliwia wprowadzenie znaku zodiaku, aby otrzymać szczegółowe informacje na jego temat, takie jak planeta wodząca, żywioł, daty trwania
+i krótki opis zarówno dla kobiet jak i mężczyzn. 
+Druga zakładka pozwala użytkownikom na wprowadzenie cyfry, a następnie wyświetla związane z nią informacje numerologiczne.
 
 4. Potencjalni odbiorcy
 -	Osoby zainteresowane astrologią, które chcą zgłębiać informacje na temat swojego znaku zodiaku
