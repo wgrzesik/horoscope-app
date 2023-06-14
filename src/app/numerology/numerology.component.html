@@ -1,7 +1,7 @@
 <body>
     <div class="search" *ngIf="!errormessage">
         <form #form="ngForm" (submit)="onSubmitNumber()">
-          <input type="text" placeholder="number" name="number" [(ngModel)]="number">
+          <input type="text" placeholder="search number" name="number" [(ngModel)]="number">
         </form>
     </div>
     <div class="container-numerology" *ngIf="numerologyData">

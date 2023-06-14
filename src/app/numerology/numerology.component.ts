@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenNumerologyService } from '../open-numerology/open-numerology.service';
 import { NumerologyData } from '../models/numerology.model';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-numerology',

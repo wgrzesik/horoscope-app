@@ -1,7 +1,6 @@
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
 
-
 :root{
     --green-1: #728c5d;
     --green-2: #364d23;
@@ -30,6 +29,7 @@ body {
 }
 .first-column {
     width: 35%;
+    height: 78vh;
     display: flex;
     flex-direction: column;
 }
