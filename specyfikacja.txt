@@ -19,6 +19,7 @@ Aplikacja umożliwia użytkownikowi uzyskanie informacji na temat znaku zodiaku 
 Pierwsza umożliwia wprowadzenie znaku zodiaku, aby otrzymać szczegółowe informacje na jego temat, takie jak planeta wodząca, żywioł, daty trwania
 i krótki opis zarówno dla kobiet jak i mężczyzn. 
 Druga zakładka pozwala użytkownikom na wprowadzenie cyfry, a następnie wyświetla związane z nią informacje numerologiczne.
+Aplikacja jest responsywna i zachowuje dane o ostatnio sprawdzonej liczbie w zakładce numerology.
 
 4. Potencjalni odbiorcy
 -	Osoby zainteresowane astrologią, które chcą zgłębiać informacje na temat swojego znaku zodiaku
@@ -31,3 +32,4 @@ Druga zakładka pozwala użytkownikom na wprowadzenie cyfry, a następnie wyświ
 6. Stos technologiczny
 -	Angular
 -	TypeScript 
+
