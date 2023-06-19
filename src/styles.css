@@ -44,7 +44,7 @@ body {
     background-color: var(--green-2);
     border-radius: 20px;
     box-shadow: 10px 10px 10px var(--shadow-dark);
-    margin: 1em;
+    margin: 1em auto;
     margin-top: 0.5em;
 }
 .if-no-error{
@@ -223,3 +223,25 @@ body {
     margin-right: 10%;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 12px; 
+    }
+  
+    .container {
+      width: 90%;
+      margin: 0.5em; 
+    }
+  
+    .first-column,
+    .second-column {
+      width: 100%;
+    }
+  
+    .upper-data img {
+      border-top-left-radius: 0; 
+      border-top-right-radius: 0;
+    }
+  
+  }

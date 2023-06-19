@@ -1,5 +1,5 @@
 .container-numerology {
-    width: 600px;
+    max-width: 768px;
     height: 78vh;
     background-color: var(--green-2);
     border-radius: 20px;
@@ -10,6 +10,7 @@
     margin-top: 0.5em;
     flex-direction: column;
 }
+
 .upper-num {
     position: relative;
     overflow: hidden;
@@ -69,4 +70,14 @@
     align-items: center;
     justify-content: center;
     text-align: center
+}
+@media screen and (max-width: 768px) {
+    body {
+      font-size: 14px; 
+    }
+
+    .container-numerology {
+        width: 90vw;
+      }
+
 }

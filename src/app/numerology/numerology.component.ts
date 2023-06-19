@@ -9,18 +9,21 @@ import { NumerologyData } from '../models/numerology.model';
 })
 export class NumerologyComponent implements OnInit{
 
-  public number: string = '7'
+  public number!: string
   public numerologyData?: NumerologyData
   errormessage: any
 
   constructor (private openNumerologyService: OpenNumerologyService) {}
 
   ngOnInit(): void {
+    this.number = localStorage.getItem('number') || '7';
     this.getNumerology();
     this.number= '';
+
   }
 
   onSubmitNumber() {
+    localStorage.setItem('number', this.number);
     this.getNumerology();
     this.number = '';
   }
