@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular
 import { Observable, catchError, throwError } from 'rxjs';
 import { HoroscopeData } from '../models/horoscope.model';
 import * as alertifyjs from 'alertifyjs';
+import { env } from 'env';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,8 @@ export class OpenHoroscopeService {
 
     const url = 'https://horoscope-astrology.p.rapidapi.com/sign?';
     const headers = new HttpHeaders({
-        'X-RapidAPI-Key': '5016ac0ebdmsha06ee5d995fe2c4p108e0fjsn03c8c4f21287',
+        //'X-RapidAPI-Key': '5016ac0ebdmsha06ee5d995fe2c4p108e0fjsn03c8c4f21287',
+        'X-RapidAPI-Key': env.API_KEY,
         'X-RapidAPI-Host': 'horoscope-astrology.p.rapidapi.com'
     });
     const params = new HttpParams()

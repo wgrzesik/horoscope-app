@@ -4,6 +4,8 @@ import { NumerologyData } from '../models/numerology.model';
 import { Observable } from 'rxjs/internal/Observable';
 import { catchError, throwError } from 'rxjs';
 import * as alertifyjs from 'alertifyjs';
+import { DefinePlugin, webpack } from 'webpack';
+import { env } from 'env';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +18,7 @@ export class OpenNumerologyService {
 
     const url = 'https://horoscope-astrology.p.rapidapi.com/numerology?';
         const headers = new HttpHeaders({
-        'X-RapidAPI-Key': '5016ac0ebdmsha06ee5d995fe2c4p108e0fjsn03c8c4f21287',
+        'X-RapidAPI-Key': env.API_KEY,
         'X-RapidAPI-Host': 'horoscope-astrology.p.rapidapi.com'
     });
     const params = new HttpParams()
