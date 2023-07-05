@@ -1,27 +1,22 @@
-# MyApp
+# Horoscope App
+Aplikacja umożliwia użytkownikowi uzyskanie informacji na temat znaku zodiaku i numerologii w łatwy i intuicyjny sposób. Aplikacja oferuje dwie zakładki.
+Pierwsza umożliwia wprowadzenie znaku zodiaku, aby otrzymać szczegółowe informacje na jego temat, takie jak planeta wodząca, żywioł, daty trwania
+i krótki opis zarówno dla kobiet jak i mężczyzn. 
+Druga zakładka pozwala użytkownikom na wprowadzenie cyfry, a następnie wyświetla związane z nią informacje numerologiczne.
+Aplikacja jest responsywna i zachowuje dane o ostatnio sprawdzonej liczbie w zakładce numerology.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Wymagania funkcjonalne 
+-	Aplikacja umożliwia wpisanie znaku zodiaku przez użytkownika i wyświetla informacje dotyczące tego znaku, takie jak: planeta wodząca (ruling planet),
+    żywioł (element), zakres dat (date range).
+-	Aplikacja umożliwia wyświetlanie spersonalizowanych wyników dla kobiet i mężczyzn. Dzięki dwóm zakładką dla kobiet i mężczyzn (woman/man),
+    które wyświetlają informację o kobietach/mężczyznach spod wybranego znaku.
+-	Łatwość przełączania się między zakładkami: Zodiac i Numerology. 
+-	Aplikacja umożliwia wpisanie liczby przez użytkownika i wyświetla informacje dotyczące tego numeru na podstawie numerologii.
+  
+## Wymagania pozafunkcjonalne
+-	Wyświetlanie grafiki spersonalizowanej do wpisanego znaku zodiaku.
+-	Zmiana koloru przycisków odpowiadających za personalizację treści w zależności od płci.
+-	Obsługa błędów 
+    	Zakładka Zodiac – wyświetla informację o niepoprawnie wpisanym znaku zodiaku
+    	Zakładka Numerology - wyświetla informację o niepoprawnie wpisanej liczbie, lub jeżeli dla danej liczby nie ma informacji 
+    	Dla wszystkich error-ów związanych z http, wyświetlana jest informacja o kodzie błędu i treści błędu w postaci wyskakującego powiadomienia. 
