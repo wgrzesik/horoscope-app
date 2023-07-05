@@ -1,0 +1,12 @@
+
+<body>
+<div class="search" *ngIf="!errormessage">
+    <form #form="ngForm" (submit)="onSubmit()">
+      <input type="text" placeholder="search sunsign" name="sunsign" [(ngModel)]="sunSign">
+    </form>
+  </div>
+
+    <app-horoscope [horoscopeData]="horoscopeData1" (newSignEvent) = "changeGender"
+    >
+    </app-horoscope>
+</body>
